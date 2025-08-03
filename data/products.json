@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "Premium noise-canceling wireless headphones with immersive sound and long battery life.",
+    "price": 99.99,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "description": "Advanced fitness tracking smartwatch with heart rate monitor and GPS.",
+    "price": 79.99,
+    "originalPrice": 99.99,
+    "imageUrl": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Laptop Stand",
+    "description": "Ergonomic adjustable laptop stand for improved posture and airflow.",
+    "price": 49.99,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=384&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Coffee Maker",
+    "description": "Professional espresso coffee maker with milk frother for barista-quality drinks.",
+    "price": 159.99,
+    "originalPrice": 199.99,
+    "imageUrl": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Gaming Mouse",
+    "description": "High-precision gaming mouse with customizable RGB lighting and programmable buttons.",
+    "price": 69.99,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=467&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Bluetooth Speaker",
+    "description": "Portable waterproof Bluetooth speaker with rich bass and 10-hour battery life.",
+    "price": 39.99,
+    "originalPrice": 59.99,
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=470&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Desk Lamp",
+    "description": "Modern LED desk lamp with adjustable brightness and color temperature.",
+    "price": 34.99,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Phone Case",
+    "description": "Durable protective phone case with a slim design and precise cutouts.",
+    "price": 24.99,
+    "originalPrice": 34.99,
+    "imageUrl": "https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "id": 9,
+    "name": "External SSD",
+    "description": "Portable 1TB external SSD for fast data transfer and reliable storage.",
+    "price": 129.99,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1605463937900-8776190b81d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Webcam",
+    "description": "Full HD 1080p webcam with auto-focus and built-in microphone for clear video calls.",
+    "price": 59.99,
+    "originalPrice": null,
+    "imageUrl": "https://images.unsplash.com/photo-1593642632781-068b8e7802d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+  }
+]
