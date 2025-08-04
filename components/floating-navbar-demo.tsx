@@ -140,13 +140,7 @@ export default function FloatingNavDemo() {
         </Sheet>
       </div>
 
-      {/* Placeholder content to demonstrate the fixed navs */}
-      <div className="min-h-[150vh] pt-24 flex items-center justify-center bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200">
-        <p className="text-xl">Scroll down to see the effect of the floating nav.</p>
-      </div>
-      <div className="min-h-[150vh] flex items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-        <p className="text-xl">More content here.</p>
-      </div>
+      
     </>
   )
 }
