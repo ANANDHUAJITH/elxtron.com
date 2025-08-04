@@ -31,20 +31,18 @@ const ModelViewer = () => {
 
   useEffect(() => {
     const viewer = viewerRef.current;
-
     if (!viewer) return;
 
     const onWheel = (e: WheelEvent) => {
-      // Reduce scroll effect by scaling deltaY
       const scaledEvent = new WheelEvent('wheel', {
         ...e,
-        deltaY: e.deltaY * 0.3, // adjust this factor to change zoom speed
+        deltaY: e.deltaY * 0.3,
         bubbles: true,
         cancelable: true,
       });
 
-      e.preventDefault(); // prevent the original event
-      viewer.dispatchEvent(scaledEvent); // dispatch scaled event
+      e.preventDefault();
+      viewer.dispatchEvent(scaledEvent);
     };
 
     viewer.addEventListener('wheel', onWheel, { passive: false });
@@ -57,7 +55,7 @@ const ModelViewer = () => {
   return (
     <div style={{ width: '100%', overflow: 'visible' }}>
       <model-viewer
-        ref={(el) => (viewerRef.current = el)}
+        ref={(el: HTMLElement | null) => (viewerRef.current = el)}
         src="https://anandhuajith.github.io/CDN/inside_drone.glb"
         alt="Drone Model"
         auto-rotate

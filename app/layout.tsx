@@ -60,6 +60,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://your-domain.vercel.app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="your-google-verification-code" />
         <script
           type="application/ld+json"

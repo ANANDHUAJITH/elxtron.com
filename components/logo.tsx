@@ -1,7 +1,11 @@
 export default function Logo() {
   return (
     <div className="fixed top-4 left-4 z-50">
-      <div className="h-[60px] bg-white/20 backdrop-blur-sm text-black px-4 rounded-full font-medium hover:bg-white/30 transition-all duration-200 shadow-xl border border-white/30 overflow-hidden flex items-center justify-center">
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50
+                h-[60px] bg-white/20 backdrop-blur-sm text-black px-4
+                rounded-full font-medium hover:bg-white/30 transition-all duration-200
+                shadow-xl border border-white/30 overflow-hidden flex items-center justify-center
+                md:static md:translate-x-0 md:left-auto md:top-auto">
         <div className="h-full w-auto flex items-center">
           {/* Inline SVG here */}
           <svg
