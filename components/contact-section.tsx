@@ -106,7 +106,7 @@ export default function ContactPage() {
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-2">Elxtron</h3>
             <p className="text-sm">&copy; {new Date().getFullYear()} Elxtron. All rights reserved.</p>
-            <p className="text-sm">Designed and Built by Elxtron Team</p>
+            <p className="text-sm">Designed and Built by z3r0</p>
           </div>
           <div className="text-center md:text-right">
             <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
