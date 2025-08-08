@@ -60,12 +60,13 @@ const ModelViewer = () => {
         alt="Drone Model"
         auto-rotate
         camera-controls
-        shadow-intensity="1"
+        camera-orbit="0deg 75deg 0.1m"
+        shadow-intensity="2"
         environment-image="neutral"
         disable-zoom={false}
         interaction-prompt="when-focused"
-        min-camera-orbit="auto auto 0.1m"
-        max-camera-orbit="auto auto 15m"
+        min-camera-orbit="auto auto 0.2m"
+        max-camera-orbit="auto auto 1m"
         style={{
           width: '150vw',
           height: '100vh',

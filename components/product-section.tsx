@@ -6,7 +6,7 @@ import ProjectModel from "@/components/project-models"
 
 export default function Products() {
   // Set this to false to hide grid labels for production
-  const showGridLabels = true;
+  const showGridLabels = false;
   const modelList = [
     {
       url: "https://anandhuajith.github.io/CDN/inside_drone.glb",
@@ -19,7 +19,7 @@ export default function Products() {
     
   ]
   return (
-    <section id="products " className="min-h-screen">
+    <section id="projects" className="min-h-screen">
       <div className="parent">
         <div className="div1">
           {showGridLabels && <span className="text-xs text-gray-400 font-light">R1-5 C1</span>}

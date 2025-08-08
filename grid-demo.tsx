@@ -6,7 +6,7 @@ const ModelViewer = dynamic(() => import('@/components/ModelViewer'), {
   ssr: false,});
 export default function GridDemo() {
   // Set this to false to hide grid labels for production
-  const showGridLabels = true
+  const showGridLabels = false
 
   return (
     <div id="home" className="min-h-screen">

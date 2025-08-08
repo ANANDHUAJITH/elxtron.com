@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label"
 import Link from "next/link"
 
 export default function ContactPage() {
-  return (  <section id="contacts " className="min-h-screen">
+  return (  <section id="contacts" className="min-h-screen">
     <div className="min-h-screen bg-white">
       <div
         className="grid h-full w-full

@@ -1,41 +1,31 @@
-// This component is now a Server Component
-import ProductCard from "./product-card" // ProductCard can still render client components like Button
+"use client"
 
-interface Product {
+import ProductCard from "./product-card"
+
+export interface Product {
   id: number
   name: string
   description: string
   price: number
-  originalPrice?: number | null
+  originalPrice: number | null
   imageUrl: string
 }
 
-interface ProductGridProps {
+interface ProductsSectionProps {
   products: Product[]
-  title: string
 }
 
-export default function ProductGrid({ products, title }: ProductGridProps) {
+export default function ProductsSection({ products }: ProductsSectionProps) {
   return (
-    <div className="w-full min-h-screen bg-white">
-      <div className="parent-grid-container">
-        <div className="grid-area-left-sidebar border-thin bg-white"></div>
-        <div className="grid-area-right-sidebar border-thin bg-white"></div>
-        <div className="grid-area-top-left border-thin bg-white"></div>
-        <div className="grid-area-top-right border-thin bg-white"></div>
-
-        {/* This div is now a placeholder to maintain grid structure */}
-        <div className="grid-area-heading-placeholder border-thin bg-white"></div>
-
-        <div className="grid-area-products-section border-thin bg-white p-4 flex flex-col items-center gap-4">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
-          <div className="flex flex-wrap justify-center gap-4 w-full">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+    <section id="products" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">Our Products</h2>
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

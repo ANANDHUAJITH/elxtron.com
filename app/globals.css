@@ -79,7 +79,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
-
+html, body {
+  overflow-x: hidden;
+}
 .parent {
   display: grid;
   grid-template-columns: 0.25fr repeat(4, 1fr) 0.25fr;

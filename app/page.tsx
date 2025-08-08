@@ -9,6 +9,7 @@ import AboutSection from "@/components/about-section"
 import ProductGrid from "@/components/product-grid"
 import productsData from "@/data/products.json"
 import ContactPage from "@/components/contact-section"
+
 export default function Page() {
   return (
     <>
@@ -19,7 +20,7 @@ export default function Page() {
       <BlogSection />
       <Products />
       <AboutSection />
-      <MoreButton />
+      <MoreButton/>
       <ProductGrid products={productsData} title="Featured Products" />
       <ContactPage />
     </>
