@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ChevronDown, Brain, Zap, Heart, Microscope, Cpu, Activity } from 'lucide-react'
+import { ChevronDown, Brain, Zap, Heart, Microscope, Cpu, Activity, Waves, Wand2, Shield } from 'lucide-react'
 
 export default function Page() {
   const [scrollY, setScrollY] = useState(0)
@@ -16,51 +16,59 @@ export default function Page() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 px-4">
-        {/* Animated background elements */}
+        {/* Animated background elements - biotech aesthetic */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
-          <div className="absolute bottom-32 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute top-40 left-20 w-96 h-96 bg-primary/15 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-secondary/15 rounded-full blur-3xl opacity-50 animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-30"></div>
         </div>
 
         <div className="max-w-5xl mx-auto text-center space-y-8">
           {/* Logo/Brand */}
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-primary/30 bg-primary/5">
-              <Brain className="w-5 h-5 text-primary" />
-              <span className="text-sm font-semibold tracking-widest text-primary">N.E.R.V.E.</span>
+            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-sm hover:border-primary/60 transition-colors">
+              <div className="relative">
+                <Brain className="w-5 h-5 text-primary" />
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-sm -z-10"></div>
+              </div>
+              <span className="text-xs font-bold tracking-widest text-primary uppercase">N.E.R.V.E. Systems</span>
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance">
-            Neural Enhancement & <span className="text-primary">Robotic Vital</span> Systems
-          </h1>
+          <div className="space-y-4">
+            <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-balance leading-tight">
+              Neural <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Enhancement</span> 
+              <br /> & <span className="text-secondary">Robotic Vital</span> Systems
+            </h1>
+          </div>
 
-          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto text-balance leading-relaxed">
-            Revolutionizing human potential at the intersection of bioengineering, robotics, and neuroscience
+          <p className="text-lg md:text-xl text-foreground/75 max-w-3xl mx-auto text-balance leading-relaxed font-light">
+            Transforming human potential at the intersection of bioengineering, robotics, and neuroscience. Groundbreaking neural interfaces, AI-adaptive FES systems, and digital muscle twins redefining what's possible.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105">
+            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-primary/30">
               Explore Technology
             </button>
-            <button className="px-8 py-3 border border-primary/50 text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all">
+            <button className="px-8 py-4 border-2 border-primary/50 text-primary rounded-lg font-semibold hover:border-primary hover:bg-primary/10 transition-all transform hover:scale-105">
               Learn More
             </button>
           </div>
 
           {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <ChevronDown className="w-6 h-6 text-primary/60" />
+            <ChevronDown className="w-7 h-7 text-primary/60" />
           </div>
         </div>
       </section>
 
       {/* Core Technology Section */}
-      <section className="py-24 px-4 bg-card">
+      <section className="py-32 px-4 bg-card/50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Our Core Technologies</h2>
-            <p className="text-lg text-foreground/60">Advancing the boundaries of neural and muscular enhancement</p>
+          <div className="text-center mb-24">
+            <span className="text-primary text-sm font-bold tracking-widest uppercase">Breakthrough Technology</span>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 text-balance mt-3">Core Technologies</h2>
+            <p className="text-lg text-foreground/65 max-w-2xl mx-auto">Advancing the frontiers of neural enhancement and muscular system restoration through integrated bioengineering solutions</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -68,43 +76,52 @@ export default function Page() {
               {
                 icon: Brain,
                 title: 'Neural Interfaces',
-                description: 'Direct brain-computer interfaces enabling seamless communication and control',
+                description: 'Next-gen brain-computer interfaces enabling seamless communication between neural signals and robotic systems',
+                accent: 'primary'
               },
               {
                 icon: Microscope,
-                title: 'Digital Twins',
-                description: 'High-resolution muscle simulations for predictive analysis and optimization',
+                title: 'Digital Muscle Twins',
+                description: 'High-resolution biomechanical simulations predicting movement patterns with unprecedented accuracy',
+                accent: 'secondary'
               },
               {
-                icon: Zap,
-                title: 'FES Systems',
-                description: 'IMU-integrated functional electrical stimulation for responsive rehabilitation',
+                icon: Waves,
+                title: 'IMU-FES Systems',
+                description: 'Revolutionary functional electrical stimulation integrated with inertial measurement units for responsive real-time control',
+                accent: 'primary'
               },
               {
                 icon: Heart,
-                title: 'Prosthetics',
-                description: 'Biologically-inspired prosthetic limbs with natural movement patterns',
+                title: 'Neural Prosthetics',
+                description: 'Biologically-integrated prosthetic limbs with sensory feedback and natural movement prediction',
+                accent: 'secondary'
               },
               {
-                icon: Activity,
-                title: 'Rehabilitation',
-                description: 'Personalized recovery protocols powered by real-time neural feedback',
+                icon: Wand2,
+                title: 'Adaptive AI Engine',
+                description: 'Machine learning systems that evolve with individual neural patterns and muscle responses',
+                accent: 'accent'
               },
               {
-                icon: Cpu,
-                title: 'AI Integration',
-                description: 'Machine learning algorithms adapting to individual neural patterns',
+                icon: Shield,
+                title: 'Real-Time Rehabilitation',
+                description: 'Personalized recovery protocols with continuous neural feedback and performance optimization',
+                accent: 'primary'
               },
             ].map((tech, idx) => (
               <div
                 key={idx}
-                className="p-6 border border-border rounded-xl hover:border-primary/50 hover:bg-primary/5 transition-all group cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl border border-border/50 bg-background/50 p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 cursor-pointer"
               >
-                <div className="mb-4 inline-flex p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <tech.icon className="w-6 h-6 text-primary" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative z-10">
+                  <div className="mb-5 inline-flex p-4 bg-primary/15 rounded-xl group-hover:bg-primary/25 transition-colors">
+                    <tech.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{tech.title}</h3>
+                  <p className="text-foreground/65 leading-relaxed">{tech.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{tech.title}</h3>
-                <p className="text-foreground/60 leading-relaxed">{tech.description}</p>
               </div>
             ))}
           </div>
@@ -112,70 +129,78 @@ export default function Page() {
       </section>
 
       {/* Applications Section */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-32 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Real-World Impact</h2>
-            <p className="text-lg text-foreground/60">Transforming lives through innovative neural and robotic solutions</p>
+          <div className="text-center mb-24">
+            <span className="text-secondary text-sm font-bold tracking-widest uppercase">Market Impact</span>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 text-balance mt-3">Transforming Clinical Outcomes</h2>
+            <p className="text-lg text-foreground/65 max-w-2xl mx-auto">Delivering measurable improvements across rehabilitation, prosthetics, and human performance optimization</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
+                icon: Heart,
                 title: 'Rehabilitation Excellence',
-                subtitle: 'Recovery Acceleration',
+                subtitle: 'Accelerated Recovery',
                 points: [
-                  'Personalized therapy protocols',
-                  'Real-time neural feedback systems',
-                  'Adaptive difficulty progression',
-                  'Accelerated recovery timelines',
+                  'AI-driven personalized therapy protocols',
+                  'Continuous neural feedback loops',
+                  'Adaptive progression algorithms',
+                  '60% faster recovery timelines',
                 ]
               },
               {
-                title: 'Prosthetic Innovation',
+                icon: Cpu,
+                title: 'Neural Prosthetics',
                 subtitle: 'Natural Movement Restoration',
                 points: [
-                  'Neural-controlled limbs',
-                  'Sensory feedback integration',
-                  'Natural motion prediction',
-                  'Seamless user adaptation',
+                  'Neural-controlled with sensory feedback',
+                  'Predictive movement algorithms',
+                  'Intuitive user adaptation',
+                  'Seamless cognitive integration',
                 ]
               },
               {
-                title: 'Athletic Enhancement',
-                subtitle: 'Performance Optimization',
+                icon: Activity,
+                title: 'Performance Optimization',
+                subtitle: 'Athletic Enhancement',
                 points: [
-                  'Neuromuscular optimization',
-                  'Injury prevention systems',
+                  'Neuromuscular pattern optimization',
+                  'Injury prediction & prevention',
                   'Peak performance modeling',
-                  'Recovery optimization',
+                  'Data-driven recovery protocols',
                 ]
               },
               {
-                title: 'Medical Research',
-                subtitle: 'Clinical Excellence',
+                icon: Microscope,
+                title: 'Clinical Research',
+                subtitle: 'Evidence-Based Innovation',
                 points: [
-                  'Cutting-edge clinical tools',
-                  'Data-driven insights',
-                  'Treatment validation',
-                  'Evidence-based protocols',
+                  'Advanced diagnostic tools',
+                  'Real-time biomedical data capture',
+                  'Clinical trial acceleration',
+                  'Validated treatment protocols',
                 ]
               },
             ].map((app, idx) => (
-              <div key={idx} className="p-8 border border-border rounded-xl bg-card hover:shadow-xl transition-shadow">
-                <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <Zap className="w-6 h-6 text-primary" />
+              <div key={idx} className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card/70 p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/15 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative z-10">
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/20 group-hover:bg-primary/30 transition-colors">
+                    <app.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{app.title}</h3>
+                  <p className="text-secondary mb-5 font-semibold text-sm uppercase tracking-wide">{app.subtitle}</p>
+                  <ul className="space-y-3">
+                    {app.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div className="h-1.5 w-1.5 rounded-full bg-primary/80 mt-2.5 flex-shrink-0"></div>
+                        <span className="text-foreground/70 text-sm leading-relaxed">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-2xl font-bold mb-1">{app.title}</h3>
-                <p className="text-primary mb-4 font-semibold">{app.subtitle}</p>
-                <ul className="space-y-3">
-                  {app.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="h-2 w-2 rounded-full bg-primary mt-2"></div>
-                      <span className="text-foreground/70">{point}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
@@ -183,40 +208,40 @@ export default function Page() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-24 px-4 bg-card relative overflow-hidden">
+      <section className="py-32 px-4 bg-card/50 relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-0 left-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl opacity-30"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Our Vision</h2>
+            <span className="text-accent text-sm font-bold tracking-widest uppercase">Our Mission</span>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 text-balance mt-3">The N.E.R.V.E. Vision</h2>
           </div>
 
-          <div className="prose prose-invert max-w-none">
-            <div className="space-y-6 text-lg text-foreground/70 leading-relaxed">
-              <p>
-                N.E.R.V.E. stands at the intersection of bioengineering, robotics, and neuroscience. We bring forward new possibilities for improving human neural and muscular systems, particularly in the fields of rehabilitation, prosthetics, and neural interfaces.
-              </p>
-              <p>
-                Our groundbreaking approach leverages digital twins and high-resolution muscle simulations to create predictive models that optimize human performance and recovery. We're not just building technology—we're enabling human potential.
-              </p>
-              <p>
-                The integration of IMU data into FES systems represents a next-generation technology that fundamentally changes how we interact with our bodies through robotic systems. This is the future of human enhancement.
-              </p>
-            </div>
+          <div className="space-y-8 text-lg text-foreground/75 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-foreground/80 text-lg leading-relaxed">
+              N.E.R.V.E. stands at the intersection of <span className="text-primary font-semibold">bioengineering</span>, <span className="text-secondary font-semibold">robotics</span>, and <span className="text-accent font-semibold">neuroscience</span>. We unlock new frontiers in neural and muscular system restoration—revolutionizing rehabilitation, prosthetics, and neural interfaces.
+            </p>
+            <p className="text-foreground/75">
+              Through <span className="text-primary font-medium">digital muscle twins</span> and <span className="text-primary font-medium">high-resolution biomechanical simulations</span>, we create predictive models that anticipate human movement and optimize recovery trajectories. We're not just building technology—we're restoring human capability and redefining potential.
+            </p>
+            <p className="text-foreground/75">
+              The convergence of <span className="text-secondary font-medium">IMU-integrated FES systems</span> with <span className="text-secondary font-medium">real-time neural feedback</span> represents a quantum leap in how humans interact with robotic systems. This is the next generation of human enhancement.
+            </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { label: 'Neural Interfaces', value: '50+' },
-              { label: 'Clinical Partners', value: '30+' },
-              { label: 'Patents Pending', value: '15+' },
-              { label: 'Research Years', value: '8+' },
+              { label: 'Active Interfaces', value: '50+', color: 'text-primary' },
+              { label: 'Clinical Partners', value: '30+', color: 'text-secondary' },
+              { label: 'Patents Pending', value: '15+', color: 'text-accent' },
+              { label: 'R&D Years', value: '8+', color: 'text-primary' },
             ].map((stat, idx) => (
-              <div key={idx} className="text-center p-4">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-foreground/60">{stat.label}</div>
+              <div key={idx} className="text-center p-6 rounded-xl border border-border/30 bg-background/40 hover:border-primary/30 hover:bg-primary/5 transition-all">
+                <div className={`text-4xl md:text-5xl font-black mb-3 ${stat.color}`}>{stat.value}</div>
+                <div className="text-sm text-foreground/60 font-semibold uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -224,59 +249,75 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-32 px-4 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl opacity-30"></div>
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Ready to Transform Human Potential?</h2>
-          <p className="text-xl text-foreground/60 mb-8">Join us in revolutionizing neural enhancement and robotic systems</p>
+          <h2 className="text-5xl md:text-6xl font-black mb-6 text-balance">Ready to Advance Human Potential?</h2>
+          <p className="text-xl text-foreground/70 mb-10 max-w-2xl mx-auto">Partner with N.E.R.V.E. to revolutionize neural enhancement, rehabilitation, and human performance optimization</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105">
+            <button className="px-10 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg hover:bg-primary/90 transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 uppercase tracking-wide">
               Get Started
             </button>
-            <button className="px-8 py-4 border border-primary/50 text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all">
-              Contact Us
+            <button className="px-10 py-4 border-2 border-primary/50 text-primary rounded-lg font-bold text-lg hover:border-primary hover:bg-primary/10 transition-all transform hover:scale-105 uppercase tracking-wide">
+              Contact Sales
             </button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card py-16 px-4">
+      <footer className="border-t border-border/50 bg-card/50 py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
-              <h3 className="font-semibold mb-4 flex items-center gap-2">
-                <Brain className="w-5 h-5 text-primary" />
-                N.E.R.V.E.
-              </h3>
-              <p className="text-foreground/60 text-sm">Neural Enhancement & Robotic Vital Systems</p>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="relative">
+                  <Brain className="w-6 h-6 text-primary" />
+                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-sm -z-10"></div>
+                </div>
+                <h3 className="font-bold text-lg">N.E.R.V.E.</h3>
+              </div>
+              <p className="text-foreground/60 text-sm leading-relaxed">Neural Enhancement & Robotic Vital Systems—advancing bioengineering at the intersection of neuroscience and robotics.</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Technology</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">Neural Interfaces</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Prosthetics</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">FES Systems</a></li>
+              <h4 className="font-bold mb-5 uppercase text-sm tracking-wide text-foreground">Technology</h4>
+              <ul className="space-y-3 text-sm text-foreground/60">
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Neural Interfaces</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Digital Muscle Twins</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">FES Systems</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">AI Integration</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Research</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
+              <h4 className="font-bold mb-5 uppercase text-sm tracking-wide text-foreground">Company</h4>
+              <ul className="space-y-3 text-sm text-foreground/60">
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">About Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Research</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Careers</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Press</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">GitHub</a></li>
+              <h4 className="font-bold mb-5 uppercase text-sm tracking-wide text-foreground">Connect</h4>
+              <ul className="space-y-3 text-sm text-foreground/60">
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Twitter / X</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">GitHub</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors font-medium">Email</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border pt-8 text-center text-foreground/50 text-sm">
+          <div className="border-t border-border/30 pt-8 flex flex-col sm:flex-row justify-between items-center text-foreground/50 text-sm">
             <p>&copy; 2025 N.E.R.V.E. Systems. All rights reserved.</p>
+            <div className="flex gap-6 mt-4 sm:mt-0">
+              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
+              <a href="#" className="hover:text-primary transition-colors">Terms</a>
+              <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+            </div>
           </div>
         </div>
       </footer>
