@@ -7,39 +7,39 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ELXTRON LABS - Advanced Technology Solutions",
+  title: "N.E.R.V.E. - Neural Enhancement & Robotic Vital Systems",
   description:
-    "Discover cutting-edge technology solutions and innovative products at ELXTRON LABS. Explore our interactive 3D demonstrations and advanced engineering capabilities.",
-  keywords: "ELXTRON LABS, technology, innovation, 3D modeling, engineering, advanced solutions, drone technology",
-  authors: [{ name: "ELXTRON LABS" }],
-  creator: "ELXTRON LABS",
-  publisher: "ELXTRON LABS",
+    "Revolutionizing human potential through bioengineering, robotics, and neuroscience. Explore cutting-edge neural interfaces, prosthetics, and FES systems powered by digital twins and advanced muscle simulations.",
+  keywords: "neural enhancement, robotics, bioengineering, neuroscience, prosthetics, neural interfaces, FES, rehabilitation, digital twins, muscle simulation",
+  authors: [{ name: "N.E.R.V.E." }],
+  creator: "N.E.R.V.E.",
+  publisher: "N.E.R.V.E.",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://your-domain.vercel.app",
-    title: "ELXTRON LABS - Advanced Technology Solutions",
-    description: "Discover cutting-edge technology solutions and innovative products at ELXTRON LABS.",
-    siteName: "ELXTRON LABS",
+    title: "N.E.R.V.E. - Neural Enhancement & Robotic Vital Systems",
+    description: "Revolutionizing human potential through bioengineering and neural technology.",
+    siteName: "N.E.R.V.E.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ELXTRON LABS - Advanced Technology Solutions",
+        alt: "N.E.R.V.E. - Neural Enhancement & Robotic Vital Systems",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ELXTRON LABS - Advanced Technology Solutions",
-    description: "Discover cutting-edge technology solutions and innovative products at ELXTRON LABS.",
+    title: "N.E.R.V.E. - Neural Enhancement & Robotic Vital Systems",
+    description: "Revolutionizing human potential through bioengineering and neural technology.",
     images: ["/images/og-image.jpg"],
-    creator: "@elxtronlabs",
+    creator: "@nervesystems",
   },
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#000000",
+  themeColor: "#0f1419",
   manifest: "/manifest.json",
   icons: {
     icon: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#000000" }],
+    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#1e88e5" }],
   },
     generator: 'v0.dev'
 }
@@ -69,11 +69,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "ELXTRON LABS",
+              name: "N.E.R.V.E.",
               url: "https://your-domain.vercel.app",
-              logo: "https://your-domain.vercel.app/images/elxtron-logo.png",
-              description: "Advanced technology solutions and innovative products",
-              sameAs: ["https://twitter.com/elxtronlabs", "https://linkedin.com/company/elxtronlabs"],
+              logo: "https://your-domain.vercel.app/images/nerve-logo.png",
+              description: "Neural Enhancement & Robotic Vital Systems - Revolutionizing human potential through bioengineering and neuroscience",
+              sameAs: ["https://twitter.com/nervesystems", "https://linkedin.com/company/nervesystems"],
             }),
           }}
         />
